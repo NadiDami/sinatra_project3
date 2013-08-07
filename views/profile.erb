@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CFG Profiles</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+</head>
+<body>
+    <% @data.drop(1).each do |data| %>
+        <div class='container'>
+            <h1><%=data[1]%></h1> 
+             <% if data[2]=='Teaching staff' %>
+                <span class="badge badge-info pull-left">   Course staff</span>
+               
+
+
+         <% end %>
+        
+    </div>
+</body>
+</html>
