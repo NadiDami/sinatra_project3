@@ -11,10 +11,16 @@ def get_data
 end
 
 get '/' do 
-@data = get_data
-erb:table
+  @data = get_data
+  erb :table
 end
 
-get "/profiles/'<%=data[3]%>'" do
-erb:profile
+
+get '/profiles/:username' do
+  @data = get_data
+  username = params[:username]
+  @profile = @data.reject { |data| data[3]!=username }.first
+  @main = @data[0]
+  erb :profile
 end 
+

@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>CFG Profiles</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
-</head>
-<body>
-    <% @data.drop(1).each do |data| %>
-        <div class='container'>
-            <h1><%=data[1]%></h1> 
-             <% if data[2]=='Teaching staff' %>
-                <span class="badge badge-info pull-left">   Course staff</span>
-               
-
-
-         <% end %>
-        
-    </div>
-</body>
+	<head>
+		<title>CFG Profiles</title>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class='container'>
+			<h1><%=@profile[1]%></h1>
+			<% if @profile[2]=='Teaching staff' %>
+				<span class="badge badge-info pull-left"> Course staff</span>
+			<% end %>
+			<br>
+				<h3><%=@main[6]%></h3>
+				<p><%=@profile[6]%></p>
+			<br>
+				<h3><%=@main[7]%></h3>
+				<p><%=@profile[7]%></p>
+			<br>
+				<h3><%=@main[8]%></h3>
+				<p><%=@profile[8]%></p>
+			<br>
+				<h3><%=@main[9]%></h3>
+				<p><%=@profile[9]%></p>
+			<br>
+				<h3><%=@main[10]%></h3>
+				<p><%=@profile[10]%></p>
+			<br>
+				<h3><%=@main[11]%></h3>
+				<p><%=@profile[11]%></p>
+			<br>
+		</div>
+	</body>
 </html>

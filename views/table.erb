@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>CFG Profiles</title>
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class='container'>
         <h1>CFG Profiles</h1>
-<table class='table table-bordered'>
-    <tbody>
-    <% @data.drop(1).each do |data| %>
-        <tr><td><a href="/profiles/<%=data[3]%>"><%=data[1]%></a>
+        <table class='table table-bordered'>
+          <tbody>
+            <% @data.drop(1).each do |data| %>
+              <tr>
+                <td><a href="/profiles/<%=data[3]%>"><%=data[1]%></a>
                 <% if data[2]=='Teaching staff' %>
-                <span class="badge badge-info pull-right">Course staff</span>
-                <% end %></td></tr>
-    <% end %>
-    </tbody>
-</table>
-        
+                  <span class="badge badge-info pull-right">Course staff</span>
+                <% end %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>   
     </div>
-</body>
+  </body>
 </html>
